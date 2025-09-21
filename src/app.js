@@ -17,7 +17,10 @@ const app = express();
 connectDB();
 
 // Middlewares
-app.use(cors({ origin: process.env.CLIENT_ORIGIN || 'http://localhost:5173' }));
+app.use(cors({
+  origin: process.env.CLIENT_ORIGIN || 'http://localhost:5173'
+}));
+
 app.use(express.json());
 
 // Rutas
