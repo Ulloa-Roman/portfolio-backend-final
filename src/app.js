@@ -5,6 +5,7 @@ import connectDB from './config/db.js';
 import projectRoutes from './routes/project.routes.js';
 import contactRoutes from './routes/contact.js';
 
+
 // Cargo variables de entorno
 dotenv.config();
 console.log('MONGO_URI:', process.env.MONGO_URI);
@@ -18,7 +19,7 @@ connectDB();
 
 // Middlewares
 app.use(cors({
-  origin: process.env.CLIENT_ORIGIN || 'http://localhost:5173'
+  origin: 'https://portfolio-frontend-final.vercel.app'
 }));
 
 app.use(express.json());
